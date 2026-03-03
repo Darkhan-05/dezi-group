@@ -33,10 +33,9 @@ const values = [
 ]
 
 const timeline = [
-  { year: "2023", event: "Основание компании Ademi Holding. Начало строительства первого объекта." },
-  { year: "2024", event: "Сдача ЖК «Ак Шанырак» — первого объекта компании в центре Кокшетау." },
-  { year: "2025", event: "Запуск ЖК BAITAS. Расширение портфеля проектов компании." },
-  { year: "2026", event: "Строительство ЖК DOSTAR. Укрепление позиций на рынке Кокшетау." },
+  { year: "2023", event: "Основание компании Ademi Holding. Сдача ЖК DOSTAR — первого объекта компании." },
+  { year: "2025", event: "Сдача ЖК Tumar Deluxe — комплекса бизнес-класса в «золотом квадрате» Кокшетау." },
+  { year: "2026", event: "Строительство ЖК ORDA. Укрепление позиций на рынке Кокшетау." },
 ]
 
 export default function AboutPage() {
@@ -192,8 +191,6 @@ export default function AboutPage() {
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { src: "/images/ak-shanyraq.jpg", alt: "ЖК Ак Шанырак" },
-              { src: "/images/baitas.jpg", alt: "ЖК BAITAS" },
               { src: "/images/dostar.jpg", alt: "ЖК DOSTAR" },
               { src: "/images/hero-building.jpg", alt: "Строительство" },
               { src: "/images/interior.jpg", alt: "Интерьер квартиры" },

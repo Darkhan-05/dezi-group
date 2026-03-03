@@ -7,7 +7,7 @@ const contacts = [
   {
     icon: MapPin,
     title: "Адрес",
-    lines: ["г. Кокшетау, Акмолинская область", "Казахстан"],
+    lines: ["г. Кокшетау, ​Улица Малика Габдуллина, 4"],
   },
   {
     icon: Phone,
@@ -24,7 +24,7 @@ const contacts = [
   {
     icon: Clock,
     title: "Режим работы",
-    lines: ["Пн–Пт: 09:00 – 18:00", "Сб: 10:00 – 15:00"],
+    lines: ["Пн–Пт: 09:00 – 20:00", "Сб-Вс: 11:00 – 17:00"],
   },
 ]
 
@@ -43,10 +43,10 @@ export function ContactInfoSection() {
           </div>
         </AnimatedSection>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 items-stretch">
           {contacts.map((contact, i) => (
             <AnimatedSection key={i} delay={i * 100}>
-              <div className="flex flex-col items-center gap-3 rounded-xl bg-card p-6 text-center shadow-sm">
+              <div className="flex flex-col h-full items-center gap-3 rounded-xl bg-card p-6 text-center shadow-sm">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary">
                   <contact.icon className="h-5 w-5 text-primary-foreground" />
                 </div>

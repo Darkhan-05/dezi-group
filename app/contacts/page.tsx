@@ -34,8 +34,8 @@ const contacts = [
   {
     icon: Instagram,
     label: "Instagram",
-    value: "@ademiholding",
-    href: "https://instagram.com/ademiholding",
+    value: "@ademi_holding",
+    href: "https://instagram.com/ademi_holding",
     description: "Следите за новостями",
   },
 ]
@@ -132,7 +132,7 @@ export default function ContactsPage() {
                     <div className="flex flex-col gap-1">
                       <span className="text-sm font-semibold text-foreground">Адрес</span>
                       <span className="text-sm text-muted-foreground">
-                        г. Кокшетау, Акмолинская область, Республика Казахстан
+                        г. Кокшетау, ​Улица Малика Габдуллина, 4
                       </span>
                     </div>
                   </div>
@@ -164,22 +164,6 @@ export default function ContactsPage() {
               </div>
             </AnimatedSection>
           </div>
-        </div>
-      </section>
-
-      {/* Map */}
-      <section className="bg-background">
-        <div className="relative h-[400px] w-full lg:h-[500px]">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39893.95!2d69.38!3d53.28!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c17f4d42e20c01%3A0x2d7a0f0c99f1a3f0!2z0JrQvtC60YjQtdGC0LDRgywg0JDQutC80L7Qu9C40L3RgdC60LDRjyDQvtCx0LsuLCDQmtCw0LfQsNGF0YHRgtCw0L0!5e0!3m2!1sru!2skz!4v1700000000000!5m2!1sru!2skz"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Расположение офиса Ademi Holding в Кокшетау"
-          />
         </div>
       </section>
     </>

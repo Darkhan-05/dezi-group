@@ -41,15 +41,21 @@ export function PurchaseSection() {
           </div>
         </AnimatedSection>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-3 items-stretch">
           {options.map((option, i) => (
-            <AnimatedSection key={i} delay={i * 150}>
-              <div className="flex flex-col items-center gap-4 rounded-xl border border-border bg-card p-8 text-center shadow-sm transition-all hover:border-accent/30 hover:shadow-md">
+            <AnimatedSection key={i} delay={i * 150} className="h-full">
+              <div className="flex h-full flex-col items-center gap-4 rounded-xl border border-border bg-card p-8 text-center shadow-sm transition-all hover:border-accent/30 hover:shadow-md">
                 <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary">
                   <option.icon className="h-7 w-7 text-primary-foreground" />
                 </div>
-                <h3 className="text-xl font-bold text-card-foreground">{option.title}</h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">{option.description}</p>
+
+                <h3 className="text-xl font-bold text-card-foreground">
+                  {option.title}
+                </h3>
+
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  {option.description}
+                </p>
               </div>
             </AnimatedSection>
           ))}

@@ -39,11 +39,10 @@ export function ProjectsSection() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                     <div className="absolute bottom-4 left-4 right-4">
                       <span
-                        className={`inline-block rounded-full px-3 py-1 text-xs font-semibold ${
-                          project.status === "Сдан"
+                        className={`inline-block rounded-full px-3 py-1 text-xs font-semibold ${project.status === "Сдан"
                             ? "bg-green-500/90 text-white"
                             : "bg-amber-500/90 text-white"
-                        }`}
+                          }`}
                       >
                         {project.status}
                       </span>
@@ -58,7 +57,7 @@ export function ProjectsSection() {
                       <span className="text-border">|</span>
                       <span>{project.floors} этажей</span>
                       <span className="text-border">|</span>
-                      <span>{project.apartments}</span>
+                      <span>{project.area || project.apartments}</span>
                     </div>
                     <div className="mt-2 flex items-center gap-2 text-sm font-semibold text-accent">
                       Подробнее

@@ -1,7 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ChevronDown } from "lucide-react"
 
 export function HeroSection() {
   return (
@@ -18,7 +17,7 @@ export function HeroSection() {
 
       <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-4 text-center">
         <span className="mb-4 inline-block rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-white/80 backdrop-blur-sm">
-          Кокшетау, Казахстан
+          Кокшетау
         </span>
         <h1 className="max-w-4xl text-balance text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
           Ваш дом в Кокшетау
@@ -45,14 +44,6 @@ export function HeroSection() {
         </div>
       </div>
 
-      <a
-        href="#projects"
-        className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 animate-bounce flex-col items-center gap-1 text-white/60 transition-colors hover:text-white"
-        aria-label="Прокрутить к проектам"
-      >
-        <span className="text-xs font-medium uppercase tracking-wider">Подробнее</span>
-        <ChevronDown className="h-5 w-5" />
-      </a>
     </section>
   )
 }

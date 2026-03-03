@@ -19,6 +19,43 @@ export function ContactForm({ selectedProject, variant = "dark" }: ContactFormPr
   const [phone, setPhone] = useState("")
   const [project, setProject] = useState(selectedProject || "")
 
+  const formatPhoneNumber = (value: string) => {
+    let digits = value.replace(/\D/g, "")
+
+    // Если начинается с 7 или 8 — убираем код страны
+    if (digits.startsWith("7") || digits.startsWith("8")) {
+      digits = digits.slice(1)
+    }
+
+    // Берём максимум 10 цифр
+    digits = digits.slice(0, 10)
+
+    let result = "+7"
+
+    if (digits.length > 0) {
+      result += " (" + digits.slice(0, 3)
+    }
+
+    if (digits.length >= 4) {
+      result += ") " + digits.slice(3, 6)
+    }
+
+    if (digits.length >= 7) {
+      result += " " + digits.slice(6, 8)
+    }
+
+    if (digits.length >= 9) {
+      result += " " + digits.slice(8, 10)
+    }
+
+    return result
+  }
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const formatted = formatPhoneNumber(e.target.value)
+    setPhone(formatted)
+  }
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     setSubmitted(true)
@@ -60,7 +97,7 @@ export function ContactForm({ selectedProject, variant = "dark" }: ContactFormPr
           onChange={(e) => setName(e.target.value)}
           required
           className={isDark
-            ? "border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/40 focus:border-accent"
+            ? "border-primary-foreground/20 bg-primary-foreground/10 text-white placeholder:text-white/40 focus:border-accent"
             : "border-border bg-background text-foreground"
           }
         />
@@ -74,22 +111,22 @@ export function ContactForm({ selectedProject, variant = "dark" }: ContactFormPr
           type="tel"
           placeholder="+7 (___) ___ __ __"
           value={phone}
-          onChange={(e) => setPhone(e.target.value)}
+          onChange={handlePhoneChange}
           required
           className={isDark
-            ? "border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/40 focus:border-accent"
+            ? "border-primary-foreground/20 bg-primary-foreground/10 text-white placeholder:text-white/40 focus:border-accent"
             : "border-border bg-background text-foreground"
           }
         />
       </div>
       <div className="flex flex-col gap-2">
-        <Label htmlFor="project" className={isDark ? "text-primary-foreground/80" : "text-foreground"}>
+        <Label htmlFor="project" className={isDark ? "text-primary-foreground/80 font-medium" : "text-foreground font-medium"}>
           Жилой комплекс
         </Label>
         <Select value={project} onValueChange={setProject}>
           <SelectTrigger
             className={isDark
-              ? "border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground"
+              ? "border-primary-foreground/20 bg-primary-foreground/10 text-white [&>span]:text-white focus:ring-accent"
               : "border-border bg-background text-foreground"
             }
           >

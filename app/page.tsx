@@ -4,7 +4,6 @@ import { StatsSection } from "@/components/home/stats-section"
 import { AdvantagesSection } from "@/components/home/advantages-section"
 import { PurchaseSection } from "@/components/home/purchase-section"
 import { ConsultationSection } from "@/components/home/consultation-section"
-import { MapSection } from "@/components/home/map-section"
 import { ContactInfoSection } from "@/components/home/contact-info-section"
 
 export default function HomePage() {
@@ -16,7 +15,6 @@ export default function HomePage() {
       <AdvantagesSection />
       <PurchaseSection />
       <ConsultationSection />
-      <MapSection />
       <ContactInfoSection />
     </>
   )

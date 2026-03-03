@@ -9,7 +9,7 @@ const navLinks = [
   { href: "/", label: "Главная" },
   { href: "/about", label: "О нас" },
   { href: "/projects", label: "Проекты" },
-  { href: "/apartments", label: "Квартиры" },
+  { href: "/apartments", label: "Планировки" },
   { href: "/mortgage", label: "Ипотека" },
   { href: "/contacts", label: "Контакты" },
 ]
@@ -29,11 +29,10 @@ export function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? "bg-primary shadow-lg py-3"
-            : "bg-primary/80 backdrop-blur-md py-4 lg:py-5"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+          ? "bg-primary shadow-lg py-3"
+          : "bg-primary/80 backdrop-blur-md py-4 lg:py-5"
+          }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 lg:px-8">
           <Link href="/" className="flex items-center gap-2" aria-label="Ademi Holding - На главную">

@@ -1,14 +1,14 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, MapPin, Building2, Layers } from "lucide-react"
+import { ArrowRight, MapPin, Building2, Ruler } from "lucide-react"
 import { projects } from "@/lib/data"
 import { AnimatedSection } from "@/components/animated-section"
 import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
   title: "Проекты — Ademi Holding",
-  description: "Жилые комплексы комфорт-класса от Ademi Holding в Кокшетау: ЖК Ак Шанырак, ЖК BAITAS, ЖК DOSTAR.",
+  description: "Жилые комплексы от Ademi Holding в Кокшетау: ЖК DOSTAR, ЖК Tumar Deluxe, ЖК ORDA.",
 }
 
 export default function ProjectsPage() {
@@ -27,7 +27,7 @@ export default function ProjectsPage() {
             Наши жилые комплексы
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-primary-foreground/70">
-            Выберите идеальный дом для вашей семьи из нашего портфеля проектов комфорт-класса
+            Выберите идеальный дом для вашей семьи из нашего портфеля проектов
           </p>
         </div>
       </section>
@@ -46,16 +46,20 @@ export default function ProjectsPage() {
                       fill
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute left-4 top-4">
+                    <div className="absolute left-4 top-4 flex items-center gap-2">
                       <span
-                        className={`inline-block rounded-full px-4 py-1.5 text-xs font-semibold ${
-                          project.status === "Сдан"
-                            ? "bg-green-500/90 text-white"
-                            : "bg-amber-500/90 text-white"
-                        }`}
+                        className={`inline-block rounded-full px-4 py-1.5 text-xs font-semibold ${project.status === "Сдан"
+                          ? "bg-green-500/90 text-white"
+                          : "bg-amber-500/90 text-white"
+                          }`}
                       >
                         {project.status}
                       </span>
+                      {project.statusNote && (
+                        <span className="inline-block rounded-full bg-white/90 px-3 py-1.5 text-xs font-medium text-gray-700">
+                          {project.statusNote}
+                        </span>
+                      )}
                     </div>
                   </div>
 
@@ -78,10 +82,12 @@ export default function ProjectsPage() {
                         <Building2 className="h-4 w-4 shrink-0 text-accent" />
                         <span>{project.floors} этажей</span>
                       </div>
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <Layers className="h-4 w-4 shrink-0 text-accent" />
-                        <span>{project.apartments}</span>
-                      </div>
+                      {project.area && (
+                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                          <Ruler className="h-4 w-4 shrink-0 text-accent" />
+                          <span>{project.area}</span>
+                        </div>
+                      )}
                       <div className="flex items-center gap-2 text-sm text-muted-foreground">
                         <svg className="h-4 w-4 shrink-0 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M3 21h18" />
@@ -97,6 +103,12 @@ export default function ProjectsPage() {
                       </div>
                     </div>
 
+                    {project.pricePerSqm && (
+                      <div className="rounded-lg bg-accent/10 px-4 py-2">
+                        <span className="text-sm font-semibold text-accent">{project.pricePerSqm} за м²</span>
+                      </div>
+                    )}
+
                     <div className="flex flex-col gap-3 sm:flex-row">
                       <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
                         <Link href={`/projects/${project.slug}`}>
@@ -104,9 +116,9 @@ export default function ProjectsPage() {
                           <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
                       </Button>
-                      <Button asChild variant="outline" className="border-border text-foreground hover:bg-secondary">
-                        <Link href={`/apartments?project=${project.slug}`}>
-                          Смотреть квартиры
+                      <Button asChild variant="outline" className="border-border text-foreground hover:text-black hover:bg-secondary ">
+                        <Link href={`/projects/${project.slug}#plans`}>
+                          Смотреть планировки
                         </Link>
                       </Button>
                     </div>
