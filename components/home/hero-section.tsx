@@ -5,7 +5,6 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
-import { ChevronDown } from "lucide-react"
 
 export function HeroSection() {
   const ref = useRef(null)
