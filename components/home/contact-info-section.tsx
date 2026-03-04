@@ -1,6 +1,6 @@
 "use client"
 
-import { AnimatedSection } from "@/components/animated-section"
+import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/animated-section"
 import { Phone, MapPin, Clock, Mail } from "lucide-react"
 
 const contacts = [
@@ -30,25 +30,33 @@ const contacts = [
 
 export function ContactInfoSection() {
   return (
-    <section className="bg-secondary py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-4 lg:px-8">
+    <section className="relative overflow-hidden bg-background py-20 lg:py-28">
+      {/* Decorative */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2">
+        <div className="h-px w-16 bg-gradient-to-r from-transparent via-accent to-transparent" />
+      </div>
+      <div className="absolute -right-20 top-1/3 h-60 w-60 rounded-full bg-accent/5 blur-[80px]" />
+
+      <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
         <AnimatedSection>
           <div className="mb-12 flex flex-col items-center gap-4 text-center">
-            <span className="text-sm font-semibold uppercase tracking-wider text-accent">
+            <span className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-accent">
+              <span className="h-px w-8 bg-accent" />
               Свяжитесь с нами
+              <span className="h-px w-8 bg-accent" />
             </span>
-            <h2 className="text-balance text-3xl font-bold text-secondary-foreground md:text-4xl lg:text-5xl">
+            <h2 className="text-balance text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">
               Контакты
             </h2>
           </div>
         </AnimatedSection>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 items-stretch">
+        <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 items-stretch" staggerDelay={0.1}>
           {contacts.map((contact, i) => (
-            <AnimatedSection key={i} delay={i * 100}>
-              <div className="flex flex-col h-full items-center gap-3 rounded-xl bg-card p-6 text-center shadow-sm">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary">
-                  <contact.icon className="h-5 w-5 text-primary-foreground" />
+            <StaggerItem key={i} variant="scaleIn">
+              <div className="group flex flex-col h-full items-center gap-4 rounded-2xl glass-light p-6 text-center card-hover hover-glow">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-accent shadow-lg shadow-accent/20 transition-all duration-500 group-hover:shadow-accent/40 group-hover:scale-110">
+                  <contact.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
                   {contact.title}
@@ -71,9 +79,9 @@ export function ContactInfoSection() {
                   )}
                 </div>
               </div>
-            </AnimatedSection>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   )

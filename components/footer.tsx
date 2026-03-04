@@ -1,96 +1,137 @@
+"use client"
+
 import Link from "next/link"
 import { Phone, MapPin, Clock, Instagram } from "lucide-react"
+import { motion } from "framer-motion"
+
+const footerLinks = [
+  { href: "/", label: "Главная" },
+  { href: "/about", label: "О компании" },
+  { href: "/projects", label: "Проекты" },
+  { href: "/apartments", label: "Планировки" },
+  { href: "/mortgage", label: "Ипотека" },
+  { href: "/contacts", label: "Контакты" },
+]
+
+const projectLinks = [
+  { href: "/projects/chicago", label: "ЖК CHICAGO" },
+  { href: "/projects/turkestan-3", label: "ЖК TURKESTAN III" },
+  { href: "/projects/boston", label: "ЖК BOSTON" },
+]
 
 export function Footer() {
   return (
-    <footer className="bg-primary text-primary-foreground">
-      <div className="mx-auto max-w-7xl px-4 py-16 lg:px-8">
+    <footer className="relative overflow-hidden bg-gradient-to-b from-primary to-[#0f2e20] text-primary-foreground">
+      {/* Decorative */}
+      <div className="absolute -left-32 top-0 h-64 w-64 rounded-full bg-accent/5 blur-[100px]" />
+      <div className="absolute -right-32 bottom-0 h-64 w-64 rounded-full bg-emerald-400/5 blur-[100px]" />
+
+      <div className="relative mx-auto max-w-7xl px-4 py-16 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
-          <div className="flex flex-col gap-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-col gap-4"
+          >
             <div className="flex flex-col">
               <span className="text-2xl font-bold tracking-tight">KOMFORTSTROY</span>
-              <span className="text-xs font-medium tracking-[0.25em] text-accent uppercase text-emerald-400">
+              <span className="text-xs font-medium tracking-[0.25em] uppercase text-emerald-400">
                 Строительная компания
               </span>
             </div>
-            <p className="text-sm leading-relaxed text-primary-foreground/70">
+            <p className="text-sm leading-relaxed text-primary-foreground/60">
               Надежный застройщик качественных кирпичных домов в Кокшетау. Строим комфортное и безопасное жилье по современным стандартам с 2017 года.
             </p>
-          </div>
+          </motion.div>
 
           {/* Navigation */}
-          <div className="flex flex-col gap-4">
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-primary-foreground/50">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="flex flex-col gap-4"
+          >
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-primary-foreground/40">
               Навигация
             </h3>
             <nav className="flex flex-col gap-2" aria-label="Навигация в подвале">
-              {[
-                { href: "/", label: "Главная" },
-                { href: "/about", label: "О компании" },
-                { href: "/projects", label: "Проекты" },
-                { href: "/apartments", label: "Планировки" },
-                { href: "/mortgage", label: "Ипотека" },
-                { href: "/contacts", label: "Контакты" },
-              ].map((link) => (
+              {footerLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-primary-foreground/70 transition-colors hover:text-accent"
+                  className="text-sm text-primary-foreground/60 transition-all duration-300 hover:text-emerald-400 hover:translate-x-1"
                 >
                   {link.label}
                 </Link>
               ))}
             </nav>
-          </div>
+          </motion.div>
 
           {/* Projects */}
-          <div className="flex flex-col gap-4">
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-primary-foreground/50">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="flex flex-col gap-4"
+          >
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-primary-foreground/40">
               Наши проекты
             </h3>
             <nav className="flex flex-col gap-2">
-              <Link href="/projects/chicago" className="text-sm text-primary-foreground/70 transition-colors hover:text-accent">
-                ЖК CHICAGO
-              </Link>
-              <Link href="/projects/turkestan-3" className="text-sm text-primary-foreground/70 transition-colors hover:text-accent">
-                ЖК TURKESTAN III
-              </Link>
-              <Link href="/projects/boston" className="text-sm text-primary-foreground/70 transition-colors hover:text-accent">
-                ЖК BOSTON
-              </Link>
+              {projectLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm text-primary-foreground/60 transition-all duration-300 hover:text-emerald-400 hover:translate-x-1"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </nav>
-          </div>
+          </motion.div>
 
           {/* Contacts */}
-          <div className="flex flex-col gap-4">
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-primary-foreground/50">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex flex-col gap-4"
+          >
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-primary-foreground/40">
               Контакты
             </h3>
             <div className="flex flex-col gap-3">
               <div className="flex items-start gap-2">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                <span className="text-sm text-primary-foreground/70">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
+                <span className="text-sm text-primary-foreground/60">
                   г. Кокшетау, ул. Мактая Сагдиева, 80
                 </span>
               </div>
-              <a href="https://wa.me/77714940000" className="flex items-center gap-2 text-sm text-primary-foreground/70 transition-colors hover:text-accent">
-                <Phone className="h-4 w-4 shrink-0 text-accent" />
+              <a href="https://wa.me/77714940000" className="flex items-center gap-2 text-sm text-primary-foreground/60 transition-colors hover:text-emerald-400">
+                <Phone className="h-4 w-4 shrink-0 text-emerald-400" />
                 +7 771 494 00 00
               </a>
               <div className="flex items-center gap-2">
-                <Clock className="h-4 w-4 shrink-0 text-accent" />
-                <span className="text-sm text-primary-foreground/70">
+                <Clock className="h-4 w-4 shrink-0 text-emerald-400" />
+                <span className="text-sm text-primary-foreground/60">
                   Пн-Сб: 09:00 – 19:00 <br />
                   Вс: Выходной
                 </span>
               </div>
-              <div className="mt-2 flex items-center gap-3">
+
+              {/* Social Icons */}
+              <div className="mt-3 flex items-center gap-3">
                 <a
                   href="https://wa.me/77714940000"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-foreground/10 text-primary-foreground/70 transition-colors hover:bg-accent hover:text-accent-foreground"
+                  className="social-icon flex h-10 w-10 items-center justify-center rounded-xl bg-primary-foreground/10 text-primary-foreground/70 hover:bg-emerald-400 hover:text-white"
                   aria-label="WhatsApp"
                 >
                   <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
@@ -101,26 +142,33 @@ export function Footer() {
                   href="https://instagram.com/developerkokshetau"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-foreground/10 text-primary-foreground/70 transition-colors hover:bg-accent hover:text-accent-foreground"
+                  className="social-icon flex h-10 w-10 items-center justify-center rounded-xl bg-primary-foreground/10 text-primary-foreground/70 hover:bg-gradient-to-tr hover:from-purple-500 hover:to-pink-500 hover:text-white"
                   aria-label="Instagram"
                 >
                   <Instagram className="h-4 w-4" />
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="mt-12 border-t border-primary-foreground/10 pt-8">
+        {/* Bottom bar */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-12 border-t border-primary-foreground/10 pt-8"
+        >
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-            <p className="text-sm text-primary-foreground/50">
+            <p className="text-sm text-primary-foreground/40">
               {"© 2017–2026 ТОО «КомфортСтрой2020». Все права защищены."}
             </p>
-            <p className="text-sm text-primary-foreground/50">
+            <p className="text-sm text-primary-foreground/40">
               г. Кокшетау, ул. Мактая Сагдиева, 80
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </footer>
   )

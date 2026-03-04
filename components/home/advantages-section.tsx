@@ -1,6 +1,6 @@
 "use client"
 
-import { AnimatedSection } from "@/components/animated-section"
+import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/animated-section"
 import { Shield, Award, Users, Building2, TreePine, Ruler } from "lucide-react"
 
 const advantages = [
@@ -38,12 +38,21 @@ const advantages = [
 
 export function AdvantagesSection() {
   return (
-    <section className="bg-secondary py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-4 lg:px-8">
+    <section className="relative overflow-hidden bg-secondary py-20 lg:py-28">
+      {/* Decorative elements */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2">
+        <div className="h-px w-16 bg-gradient-to-r from-transparent via-accent to-transparent" />
+      </div>
+      <div className="absolute -right-32 top-20 h-64 w-64 rounded-full bg-accent/5 blur-[80px]" />
+      <div className="absolute -left-32 bottom-20 h-64 w-64 rounded-full bg-primary/5 blur-[80px]" />
+
+      <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
         <AnimatedSection>
           <div className="mb-12 flex flex-col items-center gap-4 text-center lg:mb-16">
-            <span className="text-sm font-semibold uppercase tracking-wider text-accent">
+            <span className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-accent">
+              <span className="h-px w-8 bg-accent" />
               Наши преимущества
+              <span className="h-px w-8 bg-accent" />
             </span>
             <h2 className="max-w-lg text-balance text-3xl font-bold text-secondary-foreground md:text-4xl lg:text-5xl">
               Почему КомфортСтрой2020
@@ -51,21 +60,21 @@ export function AdvantagesSection() {
           </div>
         </AnimatedSection>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" staggerDelay={0.1}>
           {advantages.map((item, i) => (
-            <AnimatedSection key={i} delay={i * 100}>
-              <div className="flex flex-col gap-4 rounded-xl bg-card p-6 shadow-sm transition-shadow hover:shadow-md lg:p-8">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10">
-                  <item.icon className="h-6 w-6 text-accent" />
+            <StaggerItem key={i} variant={i % 2 === 0 ? "fadeLeft" : "fadeRight"}>
+              <div className="group flex h-full flex-col gap-4 rounded-2xl glass-light p-6 card-hover hover-glow lg:p-8">
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-accent/20 to-primary/10 transition-all duration-500 group-hover:from-accent/30 group-hover:to-primary/20">
+                  <item.icon className="h-7 w-7 text-accent icon-hover" />
                 </div>
                 <h3 className="text-lg font-bold text-card-foreground">{item.title}</h3>
                 <p className="text-sm leading-relaxed text-muted-foreground">
                   {item.description}
                 </p>
               </div>
-            </AnimatedSection>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   )
