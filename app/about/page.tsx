@@ -4,9 +4,9 @@ import { AnimatedSection } from "@/components/animated-section"
 import { Shield, Heart, Users, Star, Building2, Award } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "О компании — Estet Stroy",
+  title: "О компании — KomfortStroy2020",
   description:
-    "ТОО «Эстет Строй» — строительная компания в Кокшетау, специализирующаяся на строительстве премиальных ЖК и индивидуальных жилых домов.",
+    "ТОО «КомфортСтрой2020» — строительная компания в Кокшетау, специализирующаяся на строительстве современных кирпичных ЖК бизнес и комфорт-класса.",
 }
 
 const values = [
@@ -33,9 +33,9 @@ const values = [
 ]
 
 const timeline = [
-  { year: "2015", event: "Основание компании Estet Stroy. Начало строительства первых жилых объектов в Кокшетау." },
-  { year: "2022", event: "Успешная сдача ЖК KEREMET и ЖК ЭСТЕТ. Признание компании лидером в сегменте качественного жилья." },
-  { year: "2025", event: "Строительство масштабных проектов ЖК ATLANT и ЖК LUMIERE. Развитие направления индивидуального домостроения." },
+  { year: "2017", event: "Основание компании KomfortStroy2020. Начало строительства первых жилых объектов в Кокшетау." },
+  { year: "2022", event: "Успешная сдача ЖК TURKESTAN I, II и ЖК BOSTON. Признание компании надежным застройщиком кирпичных домов." },
+  { year: "2025", event: "Строительство масштабных проектов ЖК CHICAGO и ЖК TURKESTAN III. Расширение географии строительства." },
 ]
 
 export default function AboutPage() {
@@ -59,7 +59,7 @@ export default function AboutPage() {
             Строим будущее Кокшетау
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-primary-foreground/70">
-            Estet Stroy — это команда профессионалов, создающих комфортное жильё для семей, ценящих эстетику, качество и уют
+            KomfortStroy2020 — это команда профессионалов, создающих комфортное и безопасное жильё для современных семей.
           </p>
         </div>
       </section>
@@ -72,7 +72,7 @@ export default function AboutPage() {
               <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
                 <Image
                   src="/images/about-team.jpg"
-                  alt="Команда Estet Stroy"
+                  alt="Команда KomfortStroy2020"
                   fill
                   className="object-cover"
                 />
@@ -87,18 +87,18 @@ export default function AboutPage() {
                   Создаём пространства для счастливой жизни
                 </h2>
                 <p className="text-base leading-relaxed text-muted-foreground">
-                  ТОО «Эстет Строй» — строительная компания, специализирующаяся на строительстве и продаже элитной жилой недвижимости в городе Кокшетау.
+                  ТОО «КомфортСтрой2020» — строительная компания, специализирующаяся на строительстве и продаже жилой недвижимости в городе Кокшетау.
                 </p>
                 <p className="text-base leading-relaxed text-muted-foreground">
-                  Мы реализуем жилые комплексы и частные дома, сочетающие удобство, эстетику и современные технологии. Наши объекты строятся по уникальным архитектурным проектам с акцентом на премиальное качество.
+                  Мы реализуем жилые комплексы и частные дома, сочетающие надежность кирпичного домостроения, удобство и современные технологии. Наши объекты строятся с акцентом на качество материалов и комфорт будущих жителей.
                 </p>
                 <div className="mt-4 grid grid-cols-2 gap-6">
                   <div className="flex flex-col gap-1">
-                    <span className="text-3xl font-bold text-accent">10+</span>
+                    <span className="text-3xl font-bold text-accent">7+</span>
                     <span className="text-sm text-muted-foreground">Лет опыта</span>
                   </div>
                   <div className="flex flex-col gap-1">
-                    <span className="text-3xl font-bold text-primary">8+</span>
+                    <span className="text-3xl font-bold text-primary">6+</span>
                     <span className="text-sm text-muted-foreground">Реализованных проектов</span>
                   </div>
                 </div>

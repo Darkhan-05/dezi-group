@@ -7,8 +7,8 @@ import { AnimatedSection } from "@/components/animated-section"
 import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
-  title: "Проекты — Estet Stroy",
-  description: "Элитные жилые комплексы от Estet Stroy в Кокшетау: ЖК ATLANT, ЖК LUMIERE, ЖК KEREMET и частные дома.",
+  title: "Проекты — KomfortStroy2020",
+  description: "Жилые комплексы от застройщика KomfortStroy2020 в Кокшетау: ЖК CHICAGO, ЖК TURKESTAN III, ЖК BOSTON и кирпичные дома.",
 }
 
 export default function ProjectsPage() {

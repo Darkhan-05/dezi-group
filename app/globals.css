@@ -4,39 +4,61 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #05070A;
-  --foreground: #F9FAFB;
-  --card: #0D1117;
-  --card-foreground: #F9FAFB;
-  --popover: #0D1117;
-  --popover-foreground: #F9FAFB;
-  --primary: #101827;
+  --background: #FFFFFF;
+  --foreground: #111827;
+  --card: #F9FAFB;
+  --card-foreground: #111827;
+  --popover: #FFFFFF;
+  --popover-foreground: #111827;
+  --primary: #1B4332;
   --primary-foreground: #FFFFFF;
-  --secondary: #1F2937;
-  --secondary-foreground: #F9FAFB;
-  --muted: #1F2937;
-  --muted-foreground: #9CA3AF;
-  --accent: #D4AF37;
-  --accent-foreground: #05070A;
+  --secondary: #EBF1ED;
+  --secondary-foreground: #1B4332;
+  --muted: #F3F4F6;
+  --muted-foreground: #6B7280;
+  --accent: #2D6A4F;
+  --accent-foreground: #FFFFFF;
   --destructive: #EF4444;
   --destructive-foreground: #FFFFFF;
-  --border: #374151;
-  --input: #374151;
-  --ring: #D4AF37;
-  --chart-1: #D4AF37;
-  --chart-2: #B8860B;
-  --chart-3: #CD7F32;
+  --border: #E5E7EB;
+  --input: #E5E7EB;
+  --ring: #1B4332;
+  --chart-1: #1B4332;
+  --chart-2: #2D6A4F;
+  --chart-3: #52B788;
   --chart-4: #F9FAFB;
-  --chart-5: #1F2937;
+  --chart-5: #111827;
   --radius: 0.75rem;
-  --sidebar: #05070A;
-  --sidebar-foreground: #F9FAFB;
-  --sidebar-primary: #D4AF37;
-  --sidebar-primary-foreground: #05070A;
-  --sidebar-accent: #1F2937;
-  --sidebar-accent-foreground: #F9FAFB;
-  --sidebar-border: #1F2937;
-  --sidebar-ring: #D4AF37;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #111827;
+  --sidebar-primary: #1B4332;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #EBF1ED;
+  --sidebar-accent-foreground: #1B4332;
+  --sidebar-border: #E5E7EB;
+  --sidebar-ring: #2D6A4F;
+}
+
+@custom-variant dark (&:is(.dark *));
+
+.dark {
+  --background: #0D1310;
+  --foreground: #F9FAFB;
+  --card: #151D19;
+  --card-foreground: #F9FAFB;
+  --popover: #0D1310;
+  --popover-foreground: #F9FAFB;
+  --primary: #52B788;
+  --primary-foreground: #0D1310;
+  --secondary: #1F2925;
+  --secondary-foreground: #F9FAFB;
+  --muted: #1F2925;
+  --muted-foreground: #9CA3AF;
+  --accent: #52B788;
+  --accent-foreground: #0D1310;
+  --border: #2D3732;
+  --input: #2D3732;
+  --ring: #52B788;
 }
 
 @theme inline {
@@ -84,6 +106,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -98,6 +121,7 @@ html {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -105,13 +129,25 @@ html {
 }
 
 @keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes count-up {
-  from { opacity: 0; transform: scale(0.8); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .animate-fade-in-up {

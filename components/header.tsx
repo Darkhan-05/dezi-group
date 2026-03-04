@@ -35,16 +35,16 @@ export function Header() {
           }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 lg:px-8">
-          <Link href="/" className="flex items-center gap-3" aria-label="Estet Stroy - На главную">
-            <div className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-accent/30 bg-primary shadow-[0_0_15px_rgba(212,175,55,0.2)]">
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#9333EA]/20 via-[#EC4899]/20 to-[#EAB308]/20" />
-              <span className="text-lg font-bold text-accent">ЭС</span>
+          <Link href="/" className="flex items-center gap-3" aria-label="KomfortStroy2020 - На главную">
+            <div className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border border-primary/30 bg-primary shadow-[0_0_15px_rgba(27,67,50,0.2)]">
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#1B4332]/20 via-[#2D6A4F]/20 to-[#52B788]/20" />
+              <span className="text-lg font-bold text-white">КС</span>
             </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-bold tracking-tight text-foreground lg:text-2xl">
-                ESTET STROY
+            <div className={`flex flex-col ${!isScrolled ? "text-white" : "text-foreground"}`}>
+              <span className="text-xl font-bold tracking-tight lg:text-2xl">
+                KOMFORTSTROY
               </span>
-              <span className="text-[10px] font-medium tracking-[0.25em] text-accent uppercase lg:text-xs">
+              <span className={`text-[10px] font-medium tracking-[0.25em] uppercase lg:text-xs ${!isScrolled ? "text-white/80" : "text-primary"}`}>
                 Строительная компания
               </span>
             </div>
@@ -55,7 +55,8 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="rounded-lg px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:bg-primary/10 hover:text-accent"
+                className={`rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:bg-white/10 ${!isScrolled ? "text-white/90 hover:text-white" : "text-foreground/80 hover:text-primary"
+                  }`}
               >
                 {link.label}
               </Link>
@@ -64,24 +65,26 @@ export function Header() {
 
           <div className="hidden items-center gap-6 lg:flex">
             <a
-              href="https://wa.me/77017776332"
+              href="https://wa.me/77714940000"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm font-medium text-foreground/90 transition-colors hover:text-accent"
+              className={`flex items-center gap-2 text-sm font-medium transition-colors ${!isScrolled ? "text-white/90 hover:text-white" : "text-foreground/90 hover:text-primary"
+                }`}
             >
               <Phone className="h-4 w-4" />
-              +7 701 777 63 32
+              +7 771 494 00 00
             </a>
             <Button
               asChild
-              className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-[0_0_10px_rgba(212,175,55,0.3)]"
+              className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-[0_0_10px_rgba(45,106,79,0.3)]"
             >
               <Link href="/contacts">Связаться</Link>
             </Button>
           </div>
 
           <button
-            className="flex items-center justify-center rounded-lg p-2 text-foreground transition-colors hover:bg-foreground/10 lg:hidden"
+            className={`flex items-center justify-center rounded-lg p-2 transition-colors hover:bg-white/10 ${!isScrolled ? "text-white" : "text-foreground"
+              } lg:hidden`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label={isMobileMenuOpen ? "Закрыть меню" : "Открыть меню"}
             aria-expanded={isMobileMenuOpen}
@@ -108,13 +111,13 @@ export function Header() {
             ))}
             <div className="mt-6 flex flex-col items-center gap-4">
               <a
-                href="https://wa.me/77017776332"
+                href="https://wa.me/77714940000"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-lg font-medium text-foreground/80"
               >
                 <Phone className="h-5 w-5" />
-                +7 701 777 63 32
+                +7 771 494 00 00
               </a>
               <Button
                 asChild

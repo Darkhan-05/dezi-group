@@ -9,12 +9,12 @@ import './globals.css'
 const manrope = Manrope({ subsets: ['latin', 'cyrillic'] })
 
 export const metadata: Metadata = {
-  title: 'Estet Stroy — Элитные жилые комплексы и дома в Кокшетау',
-  description: 'ТОО «Эстет Строй» — ведущая строительная компания в Кокшетау. Строительство ЖК ATLANT, LUMIERE, KEREMET и индивидуальных жилых домов премиум-класса.',
-  keywords: ['Эстет Строй', 'Estet Stroy', 'недвижимость Кокшетау', 'купить квартиру Кокшетау', 'строительство частных домов', 'ЖК ATLANT', 'ЖК LUMIERE', 'ЖК KEREMET'],
+  title: 'KomfortStroy2020 — Современные жилые комплексы и кирпичные дома в Кокшетау',
+  description: 'ТОО «КомфортСтрой2020» — надежный застройщик в Кокшетау. Строительство ЖК CHICAGO, TURKESTAN III, BOSTON и качественных кирпичных домов.',
+  keywords: ['КомфортСтрой2020', 'KomfortStroy2020', 'недвижимость Кокшетау', 'купить квартиру Кокшетау', 'строительство кирпичных домов', 'ЖК CHICAGO', 'ЖК TURKESTAN III', 'ЖК BOSTON'],
   openGraph: {
-    title: 'Estet Stroy — Элитные жилые комплексы и дома в Кокшетау',
-    description: 'Строительная компания Estet Stroy — премиум ЖК и современные дома в Кокшетау',
+    title: 'KomfortStroy2020 — Современные жилые комплексы и кирпичные дома в Кокшетау',
+    description: 'Строительная компания KomfortStroy2020 — качественные ЖК и кирпичные дома в Кокшетау',
     type: 'website',
     locale: 'ru_KZ',
   },

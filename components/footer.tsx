@@ -9,13 +9,13 @@ export function Footer() {
           {/* Brand */}
           <div className="flex flex-col gap-4">
             <div className="flex flex-col">
-              <span className="text-2xl font-bold tracking-tight">ESTET STROY</span>
-              <span className="text-xs font-medium tracking-[0.25em] text-accent uppercase">
+              <span className="text-2xl font-bold tracking-tight">KOMFORTSTROY</span>
+              <span className="text-xs font-medium tracking-[0.25em] text-accent uppercase text-emerald-400">
                 Строительная компания
               </span>
             </div>
             <p className="text-sm leading-relaxed text-primary-foreground/70">
-              Лидер в сегменте качественного и эстетичного жилья в Кокшетау. Строим современные жилые комплексы и индивидуальные дома с 2015 года.
+              Надежный застройщик качественных кирпичных домов в Кокшетау. Строим комфортное и безопасное жилье по современным стандартам с 2017 года.
             </p>
           </div>
 
@@ -50,17 +50,14 @@ export function Footer() {
               Наши проекты
             </h3>
             <nav className="flex flex-col gap-2">
-              <Link href="/projects/atlant" className="text-sm text-primary-foreground/70 transition-colors hover:text-accent">
-                ЖК ATLANT
+              <Link href="/projects/chicago" className="text-sm text-primary-foreground/70 transition-colors hover:text-accent">
+                ЖК CHICAGO
               </Link>
-              <Link href="/projects/lumiere" className="text-sm text-primary-foreground/70 transition-colors hover:text-accent">
-                ЖК LUMIERE
+              <Link href="/projects/turkestan-3" className="text-sm text-primary-foreground/70 transition-colors hover:text-accent">
+                ЖК TURKESTAN III
               </Link>
-              <Link href="/projects/keremet" className="text-sm text-primary-foreground/70 transition-colors hover:text-accent">
-                ЖК KEREMET
-              </Link>
-              <Link href="/projects/private-houses" className="text-sm text-primary-foreground/70 transition-colors hover:text-accent">
-                Частные дома
+              <Link href="/projects/boston" className="text-sm text-primary-foreground/70 transition-colors hover:text-accent">
+                ЖК BOSTON
               </Link>
             </nav>
           </div>
@@ -74,12 +71,12 @@ export function Footer() {
               <div className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
                 <span className="text-sm text-primary-foreground/70">
-                  г. Кокшетау, ул. Сабатаева, 77а
+                  г. Кокшетау, ул. Мактая Сагдиева, 80
                 </span>
               </div>
-              <a href="https://wa.me/77017776332" className="flex items-center gap-2 text-sm text-primary-foreground/70 transition-colors hover:text-accent">
+              <a href="https://wa.me/77714940000" className="flex items-center gap-2 text-sm text-primary-foreground/70 transition-colors hover:text-accent">
                 <Phone className="h-4 w-4 shrink-0 text-accent" />
-                +7 701 777 63 32
+                +7 771 494 00 00
               </a>
               <div className="flex items-center gap-2">
                 <Clock className="h-4 w-4 shrink-0 text-accent" />
@@ -90,7 +87,7 @@ export function Footer() {
               </div>
               <div className="mt-2 flex items-center gap-3">
                 <a
-                  href="https://wa.me/77017776332"
+                  href="https://wa.me/77714940000"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-foreground/10 text-primary-foreground/70 transition-colors hover:bg-accent hover:text-accent-foreground"
@@ -101,7 +98,7 @@ export function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="https://instagram.com/estet_stroy"
+                  href="https://instagram.com/developerkokshetau"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-foreground/10 text-primary-foreground/70 transition-colors hover:bg-accent hover:text-accent-foreground"
@@ -117,10 +114,10 @@ export function Footer() {
         <div className="mt-12 border-t border-primary-foreground/10 pt-8">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <p className="text-sm text-primary-foreground/50">
-              {"© 2015–2026 ТОО «Эстет Строй». Все права защищены."}
+              {"© 2017–2026 ТОО «КомфортСтрой2020». Все права защищены."}
             </p>
             <p className="text-sm text-primary-foreground/50">
-              г. Кокшетау, ул. Сабатаева, 77а
+              г. Кокшетау, ул. Мактая Сагдиева, 80
             </p>
           </div>
         </div>
