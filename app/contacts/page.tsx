@@ -5,8 +5,8 @@ import { AnimatedSection } from "@/components/animated-section"
 import { ContactForm } from "@/components/contact-form"
 
 export const metadata: Metadata = {
-  title: "Контакты — KomfortStroy2020",
-  description: "Свяжитесь с KomfortStroy2020. Адрес, телефон, WhatsApp. Кокшетау, ул. Мактая Сагдиева, 80.",
+  title: "Контакты — DEZI GROUP",
+  description: "Свяжитесь с DEZI GROUP. Адрес, телефон, WhatsApp. Кокшетау, мкр. Centralnyi, 50A.",
 }
 
 const contacts = [
@@ -27,15 +27,15 @@ const contacts = [
   {
     icon: Mail,
     label: "Email",
-    value: "komfortstroy2020@mail.ru",
-    href: "mailto:komfortstroy2020@mail.ru",
+    value: "dezigroup@mail.ru",
+    href: "mailto:dezigroup@mail.ru",
     description: "Для письменных обращений",
   },
   {
     icon: Instagram,
     label: "Instagram",
-    value: "@developerkokshetau",
-    href: "https://instagram.com/developerkokshetau",
+    value: "@dezi_park_kokshetau",
+    href: "https://instagram.com/dezi_park_kokshetau",
     description: "Следите за новостями",
   },
 ]
@@ -132,7 +132,7 @@ export default function ContactsPage() {
                     <div className="flex flex-col gap-1">
                       <span className="text-sm font-semibold text-foreground">Адрес</span>
                       <span className="text-sm text-muted-foreground">
-                        г. Кокшетау, ул. Мактая Сагдиева, 80
+                        мкр. Centralnyi, 50A, г. Кокшетау
                       </span>
                     </div>
                   </div>

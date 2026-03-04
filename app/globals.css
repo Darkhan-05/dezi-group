@@ -1,5 +1,5 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
+@import "tailwindcss";
+@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -10,55 +10,55 @@
   --card-foreground: #111827;
   --popover: #FFFFFF;
   --popover-foreground: #111827;
-  --primary: #1B4332;
+  --primary: #C44900;
   --primary-foreground: #FFFFFF;
-  --secondary: #EBF1ED;
-  --secondary-foreground: #1B4332;
+  --secondary: #FFF3E8;
+  --secondary-foreground: #C44900;
   --muted: #F3F4F6;
   --muted-foreground: #6B7280;
-  --accent: #2D6A4F;
+  --accent: #F57C00;
   --accent-foreground: #FFFFFF;
   --destructive: #EF4444;
   --destructive-foreground: #FFFFFF;
   --border: #E5E7EB;
   --input: #E5E7EB;
-  --ring: #1B4332;
-  --chart-1: #1B4332;
-  --chart-2: #2D6A4F;
-  --chart-3: #52B788;
+  --ring: #C44900;
+  --chart-1: #C44900;
+  --chart-2: #F57C00;
+  --chart-3: #FFB74D;
   --chart-4: #F9FAFB;
   --chart-5: #111827;
   --radius: 0.75rem;
   --sidebar: #FFFFFF;
   --sidebar-foreground: #111827;
-  --sidebar-primary: #1B4332;
+  --sidebar-primary: #C44900;
   --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #EBF1ED;
-  --sidebar-accent-foreground: #1B4332;
+  --sidebar-accent: #FFF3E8;
+  --sidebar-accent-foreground: #C44900;
   --sidebar-border: #E5E7EB;
-  --sidebar-ring: #2D6A4F;
+  --sidebar-ring: #F57C00;
 }
 
 @custom-variant dark (&:is(.dark *));
 
 .dark {
-  --background: #0D1310;
+  --background: #1A1108;
   --foreground: #F9FAFB;
-  --card: #151D19;
+  --card: #231A0F;
   --card-foreground: #F9FAFB;
-  --popover: #0D1310;
+  --popover: #1A1108;
   --popover-foreground: #F9FAFB;
-  --primary: #52B788;
-  --primary-foreground: #0D1310;
-  --secondary: #1F2925;
+  --primary: #FFB74D;
+  --primary-foreground: #1A1108;
+  --secondary: #2A1F14;
   --secondary-foreground: #F9FAFB;
-  --muted: #1F2925;
+  --muted: #2A1F14;
   --muted-foreground: #9CA3AF;
-  --accent: #52B788;
-  --accent-foreground: #0D1310;
-  --border: #2D3732;
-  --input: #2D3732;
-  --ring: #52B788;
+  --accent: #FFB74D;
+  --accent-foreground: #1A1108;
+  --border: #3D2E1F;
+  --input: #3D2E1F;
+  --ring: #FFB74D;
 }
 
 @theme inline {
@@ -126,6 +126,7 @@ html {
     opacity: 0;
     transform: translateY(40px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -134,8 +135,13 @@ html {
 
 /* Fade In */
 @keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 /* Fade In Left */
@@ -144,6 +150,7 @@ html {
     opacity: 0;
     transform: translateX(-60px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -156,6 +163,7 @@ html {
     opacity: 0;
     transform: translateX(60px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -168,6 +176,7 @@ html {
     opacity: 0;
     transform: scale(0.85);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -181,6 +190,7 @@ html {
     filter: blur(12px);
     transform: scale(0.95);
   }
+
   to {
     opacity: 1;
     filter: blur(0);
@@ -194,6 +204,7 @@ html {
     opacity: 0;
     transform: scale(0.8);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -202,9 +213,12 @@ html {
 
 /* Float animation for indicators */
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -216,6 +230,7 @@ html {
     transform: scale(1);
     opacity: 0.6;
   }
+
   100% {
     transform: scale(1.8);
     opacity: 0;
@@ -227,9 +242,11 @@ html {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -241,12 +258,15 @@ html {
     opacity: 0;
     transform: scale(0.3) translateY(50px);
   }
+
   50% {
     transform: scale(1.05) translateY(-5px);
   }
+
   70% {
     transform: scale(0.95) translateY(2px);
   }
+
   100% {
     opacity: 1;
     transform: scale(1) translateY(0);
@@ -255,10 +275,13 @@ html {
 
 /* Scroll indicator bounce */
 @keyframes scroll-bounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
     opacity: 1;
   }
+
   50% {
     transform: translateY(8px);
     opacity: 0.5;
@@ -270,6 +293,7 @@ html {
   0% {
     background-position: -200% center;
   }
+
   100% {
     background-position: 200% center;
   }
@@ -280,6 +304,7 @@ html {
   from {
     transform: scaleX(0);
   }
+
   to {
     transform: scaleX(1);
   }
@@ -356,7 +381,7 @@ html {
 
 /* Gradient text */
 .text-gradient {
-  background: linear-gradient(135deg, #2D6A4F, #52B788, #2D6A4F);
+  background: linear-gradient(135deg, #C44900, #F57C00, #FFB74D);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -374,7 +399,7 @@ html {
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, #2D6A4F, #52B788);
+  background: linear-gradient(90deg, #C44900, #F57C00);
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
@@ -388,7 +413,7 @@ html {
 /* Card hover effects */
 .card-hover {
   transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
-              box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .card-hover:hover {
@@ -409,7 +434,7 @@ html {
   inset: 0;
   border-radius: inherit;
   padding: 2px;
-  background: linear-gradient(135deg, transparent, #2D6A4F, #52B788, transparent);
+  background: linear-gradient(135deg, transparent, #C44900, #F57C00, transparent);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -435,7 +460,7 @@ html {
 /* Icon hover animation */
 .icon-hover {
   transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
-              color 0.3s ease;
+    color 0.3s ease;
 }
 
 .group:hover .icon-hover {
@@ -448,19 +473,19 @@ html {
 }
 
 .hover-glow:hover {
-  box-shadow: 0 0 30px rgba(45, 106, 79, 0.3),
-              0 0 60px rgba(45, 106, 79, 0.1);
+  box-shadow: 0 0 30px rgba(245, 124, 0, 0.3),
+    0 0 60px rgba(245, 124, 0, 0.1);
 }
 
 /* Social icon hover */
 .social-icon {
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
-              background-color 0.3s ease,
-              color 0.3s ease,
-              box-shadow 0.3s ease;
+    background-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .social-icon:hover {
   transform: scale(1.2) translateY(-3px);
-  box-shadow: 0 8px 25px rgba(45, 106, 79, 0.35);
+  box-shadow: 0 8px 25px rgba(245, 124, 0, 0.35);
 }

@@ -4,9 +4,9 @@ import { useCountUp } from "@/hooks/use-count-up"
 import { StaggerContainer, StaggerItem } from "@/components/animated-section"
 
 const stats = [
-  { value: 7, suffix: "+", label: "Лет на рынке" },
-  { value: 6, suffix: "+", label: "Реализованных проектов" },
-  { value: 45, suffix: "к+", label: "Квадратных метров" },
+  { value: 5, suffix: "+", label: "Лет на рынке" },
+  { value: 15, suffix: "к+", label: "Квадратных метров" },
+  { value: 8, suffix: "к+", label: "Подписчиков" },
 ]
 
 function StatCard({ value, suffix, label }: { value: number; suffix: string; label: string }) {

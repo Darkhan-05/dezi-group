@@ -7,19 +7,19 @@ const contacts = [
   {
     icon: MapPin,
     title: "Адрес",
-    lines: ["г. Кокшетау, ул. Магзи Абулкасымова, 164, офис 2"],
+    lines: ["мкр. Centralnyi, 50A, г. Кокшетау"],
   },
   {
     icon: Phone,
     title: "Телефон",
-    lines: ["+7 707 141 04 41"],
-    href: "tel:+77071410441",
+    lines: ["+7 771 494 00 00"],
+    href: "tel:+77714940000",
   },
   {
     icon: Mail,
     title: "Email",
-    lines: ["info@sbinvestgroup.kz"],
-    href: "mailto:info@sbinvestgroup.kz",
+    lines: ["dezigroup@mail.ru"],
+    href: "mailto:dezigroup@mail.ru",
   },
   {
     icon: Clock,

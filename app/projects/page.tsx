@@ -7,8 +7,8 @@ import { AnimatedSection } from "@/components/animated-section"
 import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
-  title: "Проекты — KomfortStroy2020",
-  description: "Жилые комплексы от застройщика KomfortStroy2020 в Кокшетау: ЖК CHICAGO, ЖК TURKESTAN III, ЖК BOSTON и кирпичные дома.",
+  title: "Проекты — DEZI GROUP",
+  description: "Жилые комплексы от застройщика DEZI GROUP в Кокшетау: ЖК DEZI PARK — комфорт класса с видом на озеро.",
 }
 
 export default function ProjectsPage() {

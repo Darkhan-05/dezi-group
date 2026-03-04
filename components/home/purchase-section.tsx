@@ -81,7 +81,7 @@ export function PurchaseSection() {
             <Button
               asChild
               size="lg"
-              className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-[0_0_20px_rgba(45,106,79,0.3)] hover:shadow-[0_0_40px_rgba(45,106,79,0.5)] transition-all duration-500 hover:scale-105"
+              className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-[0_0_20px_rgba(245,124,0,0.3)] hover:shadow-[0_0_40px_rgba(245,124,0,0.5)] transition-all duration-500 hover:scale-105"
             >
               <Link href="/mortgage">Подробнее об ипотеке</Link>
             </Button>

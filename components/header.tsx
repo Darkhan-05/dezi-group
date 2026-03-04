@@ -40,18 +40,18 @@ export function Header() {
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 lg:px-8">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group" aria-label="KomfortStroy2020 - На главную">
+          <Link href="/" className="flex items-center gap-3 group" aria-label="DEZI GROUP - На главную">
             <motion.div
               whileHover={{ scale: 1.05, rotate: 3 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-xl border border-primary/30 bg-primary shadow-[0_0_20px_rgba(27,67,50,0.3)]"
+              className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-xl border border-primary/30 bg-primary shadow-[0_0_20px_rgba(196,73,0,0.3)]"
             >
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#1B4332] via-[#2D6A4F] to-[#52B788] opacity-90" />
-              <span className="relative text-lg font-bold text-white">КС</span>
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#C44900] via-[#F57C00] to-[#FFB74D] opacity-90" />
+              <span className="relative text-lg font-bold text-white">DG</span>
             </motion.div>
             <div className={`flex flex-col ${!isScrolled ? "text-white" : "text-foreground"}`}>
               <span className="text-xl font-bold tracking-tight lg:text-2xl transition-colors duration-300">
-                KOMFORTSTROY
+                DEZI GROUP
               </span>
               <span className={`text-[10px] font-medium tracking-[0.25em] uppercase lg:text-xs transition-colors duration-300 ${!isScrolled ? "text-white/80" : "text-primary"}`}>
                 Строительная компания
@@ -87,7 +87,7 @@ export function Header() {
             </a>
             <Button
               asChild
-              className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-[0_0_20px_rgba(45,106,79,0.3)] hover:shadow-[0_0_30px_rgba(45,106,79,0.5)] transition-all duration-300 hover:scale-105"
+              className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-[0_0_20px_rgba(245,124,0,0.3)] hover:shadow-[0_0_30px_rgba(245,124,0,0.5)] transition-all duration-300 hover:scale-105"
             >
               <Link href="/contacts">Связаться</Link>
             </Button>

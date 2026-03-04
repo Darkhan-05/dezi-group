@@ -4,9 +4,9 @@ import { AnimatedSection } from "@/components/animated-section"
 import { Shield, Heart, Users, Star, Building2, Award } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "О компании — KomfortStroy2020",
+  title: "О компании — DEZI GROUP",
   description:
-    "ТОО «КомфортСтрой2020» — строительная компания в Кокшетау, специализирующаяся на строительстве современных кирпичных ЖК бизнес и комфорт-класса.",
+    "DEZI GROUP — строительная компания в Кокшетау и Астане. ЖК DEZI PARK — комфорт класса с видом на озеро и эргономичными планировками.",
 }
 
 const values = [
@@ -33,9 +33,9 @@ const values = [
 ]
 
 const timeline = [
-  { year: "2017", event: "Основание компании KomfortStroy2020. Начало строительства первых жилых объектов в Кокшетау." },
-  { year: "2022", event: "Успешная сдача ЖК TURKESTAN I, II и ЖК BOSTON. Признание компании надежным застройщиком кирпичных домов." },
-  { year: "2025", event: "Строительство масштабных проектов ЖК CHICAGO и ЖК TURKESTAN III. Расширение географии строительства." },
+  { year: "2020", event: "Основание компании DEZI GROUP. Начало строительства первых жилых объектов в Кокшетау." },
+  { year: "2023", event: "Запуск проекта ЖК DEZI PARK — жилой комплекс комфорт-класса с видом на озеро." },
+  { year: "2025", event: "ЖК DEZI PARK сдан в эксплуатацию. Расширение географии строительства — выход на рынок Астаны." },
 ]
 
 export default function AboutPage() {
@@ -59,7 +59,7 @@ export default function AboutPage() {
             Строим будущее Кокшетау
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-primary-foreground/70">
-            KomfortStroy2020 — это команда профессионалов, создающих комфортное и безопасное жильё для современных семей.
+            DEZI GROUP — это команда профессионалов, создающих комфортное и безопасное жильё для современных семей.
           </p>
         </div>
       </section>
@@ -72,7 +72,7 @@ export default function AboutPage() {
               <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
                 <Image
                   src="/images/about-team.jpg"
-                  alt="Команда KomfortStroy2020"
+                  alt="Команда DEZI GROUP"
                   fill
                   className="object-cover"
                 />
@@ -87,19 +87,19 @@ export default function AboutPage() {
                   Создаём пространства для счастливой жизни
                 </h2>
                 <p className="text-base leading-relaxed text-muted-foreground">
-                  ТОО «КомфортСтрой2020» — строительная компания, специализирующаяся на строительстве и продаже жилой недвижимости в городе Кокшетау.
+                  DEZI GROUP — строительная компания, специализирующаяся на строительстве и продаже жилой недвижимости в городах Кокшетау и Астана.
                 </p>
                 <p className="text-base leading-relaxed text-muted-foreground">
-                  Мы реализуем жилые комплексы и частные дома, сочетающие надежность кирпичного домостроения, удобство и современные технологии. Наши объекты строятся с акцентом на качество материалов и комфорт будущих жителей.
+                  Мы реализуем жилые комплексы, сочетающие надежность, удобство и современные технологии. Наши объекты строятся с акцентом на качество материалов и комфорт будущих жителей. ЖК DEZI PARK — дом с видом на озеро и эргономичными планировками.
                 </p>
                 <div className="mt-4 grid grid-cols-2 gap-6">
                   <div className="flex flex-col gap-1">
-                    <span className="text-3xl font-bold text-accent">7+</span>
+                    <span className="text-3xl font-bold text-accent">5+</span>
                     <span className="text-sm text-muted-foreground">Лет опыта</span>
                   </div>
                   <div className="flex flex-col gap-1">
-                    <span className="text-3xl font-bold text-primary">6+</span>
-                    <span className="text-sm text-muted-foreground">Реализованных проектов</span>
+                    <span className="text-3xl font-bold text-primary">15 000+</span>
+                    <span className="text-sm text-muted-foreground">м² построено</span>
                   </div>
                 </div>
               </div>
@@ -191,7 +191,7 @@ export default function AboutPage() {
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { src: "/images/hero-building.jpg", alt: "ЖК ASAR" },
+              { src: "/images/hero-building.jpg", alt: "ЖК DEZI PARK" },
               { src: "/images/hero-building.jpg", alt: "Строительство" },
               { src: "/images/interior.jpg", alt: "Интерьер квартиры" },
               { src: "/images/about-team.jpg", alt: "Команда" },

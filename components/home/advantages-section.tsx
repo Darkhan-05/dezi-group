@@ -55,7 +55,7 @@ export function AdvantagesSection() {
               <span className="h-px w-8 bg-accent" />
             </span>
             <h2 className="max-w-lg text-balance text-3xl font-bold text-secondary-foreground md:text-4xl lg:text-5xl">
-              Почему КомфортСтрой2020
+              Почему DEZI GROUP
             </h2>
           </div>
         </AnimatedSection>

@@ -20,19 +20,19 @@ export function ConsultationSection() {
 
       {/* Decorative glowing orbs */}
       <div className="absolute -left-32 top-1/3 h-80 w-80 rounded-full bg-accent/10 blur-[120px]" />
-      <div className="absolute -right-32 bottom-1/4 h-80 w-80 rounded-full bg-emerald-400/10 blur-[120px]" />
+      <div className="absolute -right-32 bottom-1/4 h-80 w-80 rounded-full bg-[#FFB74D]/10 blur-[120px]" />
 
       <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <AnimatedSection variant="fadeLeft">
             <div className="flex flex-col gap-6">
-              <span className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-emerald-400">
-                <span className="h-px w-8 bg-emerald-400" />
+              <span className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-[#FFB74D]">
+                <span className="h-px w-8 bg-[#FFB74D]" />
                 Бесплатная консультация
               </span>
               <h2 className="max-w-lg text-balance text-3xl font-bold text-primary-foreground md:text-4xl lg:text-5xl">
                 Подберём квартиру{" "}
-                <span className="bg-gradient-to-r from-emerald-300 to-green-200 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-orange-300 to-amber-200 bg-clip-text text-transparent">
                   вашей мечты
                 </span>
               </h2>
@@ -49,9 +49,9 @@ export function ConsultationSection() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5 + i * 0.1, duration: 0.4 }}
-                    className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-300"
+                    className="inline-flex items-center gap-1.5 rounded-full border border-[#FFB74D]/20 bg-[#FFB74D]/10 px-3 py-1 text-xs font-medium text-orange-300"
                   >
-                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#FFB74D]" />
                     {item}
                   </motion.span>
                 ))}

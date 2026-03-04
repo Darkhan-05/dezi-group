@@ -14,17 +14,15 @@ const footerLinks = [
 ]
 
 const projectLinks = [
-  { href: "/projects/chicago", label: "ЖК CHICAGO" },
-  { href: "/projects/turkestan-3", label: "ЖК TURKESTAN III" },
-  { href: "/projects/boston", label: "ЖК BOSTON" },
+  { href: "/projects/dezi-park", label: "ЖК DEZI PARK" },
 ]
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-gradient-to-b from-primary to-[#0f2e20] text-primary-foreground">
+    <footer className="relative overflow-hidden bg-gradient-to-b from-[#C44900] to-[#7A2E00] text-primary-foreground">
       {/* Decorative */}
-      <div className="absolute -left-32 top-0 h-64 w-64 rounded-full bg-accent/5 blur-[100px]" />
-      <div className="absolute -right-32 bottom-0 h-64 w-64 rounded-full bg-emerald-400/5 blur-[100px]" />
+      <div className="absolute -left-32 top-0 h-64 w-64 rounded-full bg-[#FFB74D]/10 blur-[100px]" />
+      <div className="absolute -right-32 bottom-0 h-64 w-64 rounded-full bg-[#F57C00]/10 blur-[100px]" />
 
       <div className="relative mx-auto max-w-7xl px-4 py-16 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
@@ -37,13 +35,13 @@ export function Footer() {
             className="flex flex-col gap-4"
           >
             <div className="flex flex-col">
-              <span className="text-2xl font-bold tracking-tight">KOMFORTSTROY</span>
-              <span className="text-xs font-medium tracking-[0.25em] uppercase text-emerald-400">
+              <span className="text-2xl font-bold tracking-tight">DEZI GROUP</span>
+              <span className="text-xs font-medium tracking-[0.25em] uppercase text-[#FFB74D]">
                 Строительная компания
               </span>
             </div>
             <p className="text-sm leading-relaxed text-primary-foreground/60">
-              Надежный застройщик качественных кирпичных домов в Кокшетау. Строим комфортное и безопасное жилье по современным стандартам с 2017 года.
+              Строим в г. Кокшетау и в г. Астана. ЖК «DEZI PARK» — ЖК Комфорт класса, дом с видом на озеро и эргономичные планировки.
             </p>
           </motion.div>
 
@@ -63,7 +61,7 @@ export function Footer() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-primary-foreground/60 transition-all duration-300 hover:text-emerald-400 hover:translate-x-1"
+                  className="text-sm text-primary-foreground/60 transition-all duration-300 hover:text-[#FFB74D] hover:translate-x-1"
                 >
                   {link.label}
                 </Link>
@@ -87,7 +85,7 @@ export function Footer() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-primary-foreground/60 transition-all duration-300 hover:text-emerald-400 hover:translate-x-1"
+                  className="text-sm text-primary-foreground/60 transition-all duration-300 hover:text-[#FFB74D] hover:translate-x-1"
                 >
                   {link.label}
                 </Link>
@@ -108,17 +106,17 @@ export function Footer() {
             </h3>
             <div className="flex flex-col gap-3">
               <div className="flex items-start gap-2">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-emerald-400" />
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#FFB74D]" />
                 <span className="text-sm text-primary-foreground/60">
-                  г. Кокшетау, ул. Мактая Сагдиева, 80
+                  мкр. Centralnyi, 50A, г. Кокшетау
                 </span>
               </div>
-              <a href="https://wa.me/77714940000" className="flex items-center gap-2 text-sm text-primary-foreground/60 transition-colors hover:text-emerald-400">
-                <Phone className="h-4 w-4 shrink-0 text-emerald-400" />
+              <a href="https://wa.me/77714940000" className="flex items-center gap-2 text-sm text-primary-foreground/60 transition-colors hover:text-[#FFB74D]">
+                <Phone className="h-4 w-4 shrink-0 text-[#FFB74D]" />
                 +7 771 494 00 00
               </a>
               <div className="flex items-center gap-2">
-                <Clock className="h-4 w-4 shrink-0 text-emerald-400" />
+                <Clock className="h-4 w-4 shrink-0 text-[#FFB74D]" />
                 <span className="text-sm text-primary-foreground/60">
                   Пн-Сб: 09:00 – 19:00 <br />
                   Вс: Выходной
@@ -131,7 +129,7 @@ export function Footer() {
                   href="https://wa.me/77714940000"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="social-icon flex h-10 w-10 items-center justify-center rounded-xl bg-primary-foreground/10 text-primary-foreground/70 hover:bg-emerald-400 hover:text-white"
+                  className="social-icon flex h-10 w-10 items-center justify-center rounded-xl bg-primary-foreground/10 text-primary-foreground/70 hover:bg-[#FFB74D] hover:text-white"
                   aria-label="WhatsApp"
                 >
                   <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
@@ -139,7 +137,7 @@ export function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="https://instagram.com/developerkokshetau"
+                  href="https://instagram.com/dezi_park_kokshetau"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="social-icon flex h-10 w-10 items-center justify-center rounded-xl bg-primary-foreground/10 text-primary-foreground/70 hover:bg-gradient-to-tr hover:from-purple-500 hover:to-pink-500 hover:text-white"
@@ -162,10 +160,10 @@ export function Footer() {
         >
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <p className="text-sm text-primary-foreground/40">
-              {"© 2017–2026 ТОО «КомфортСтрой2020». Все права защищены."}
+              {"© 2020–2026 DEZI GROUP. Все права защищены."}
             </p>
             <p className="text-sm text-primary-foreground/40">
-              г. Кокшетау, ул. Мактая Сагдиева, 80
+              мкр. Centralnyi, 50A, г. Кокшетау
             </p>
           </div>
         </motion.div>
